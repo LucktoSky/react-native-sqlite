@@ -1,4 +1,4 @@
-# [rn-sqlite]
+# [react-native-sqlite]
 This is simple SQLite sample with tailwind in react native
 
 **HELPFUL LINKS**

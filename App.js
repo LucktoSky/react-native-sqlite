@@ -1,5 +1,6 @@
 import { Text, View } from 'react-native';
 import * as React from 'react';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -17,13 +18,13 @@ export default function App() {
           name="HomeScreen"
           component={HomeScreen}
           options={{
-            title: 'Home', 
+            title: 'Home', //Set Header Title
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: '#f4511e', //Set Header color
             },
-            headerTintColor: '#fff',
+            headerTintColor: '#fff', //Set Header text color
             headerTitleStyle: {
-              fontWeight: 'bold', 
+              fontWeight: 'bold', //Set Header text style
             },
           }}
         />
@@ -64,6 +65,14 @@ export default function App() {
             color: 'grey'
           }}>
           Example of SQLite Database in React Native
+        </Text>
+        <Text
+          style={{
+            fontSize: 16,
+            textAlign: 'center',
+            color: 'grey'
+          }}>
+          www.aboutreact.com
         </Text>
     </NavigationContainer>
   );
