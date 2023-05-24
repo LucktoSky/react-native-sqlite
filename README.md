@@ -20,7 +20,6 @@ This is simple SQLite sample with tailwind in react native
     ├── pages
     ├── ├── components
     ├── ├── ├── newButton.js
-    ├── ├── ├── newText.js
     ├── ├── ├── newTextInput.js
     │   ├── HomeScreeen.js
     │   ├── Register.js
