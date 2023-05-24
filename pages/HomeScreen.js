@@ -3,9 +3,6 @@ import { View, Text, SafeAreaView } from 'react-native';
 import Mybutton from './components/Mybutton';
 import Mytext from './components/Mytext';
 import * as SQLite from 'expo-sqlite';
-// import { openDatabase } from 'react-native-sqlite-storage';
-
-// var db = openDatabase({ name: 'UserDatabase.db', createFromLocation : 1 });
 const db = SQLite.openDatabase('mydb.db');
 
 const HomeScreen = ({ navigation }) => {
@@ -35,41 +32,14 @@ const HomeScreen = ({ navigation }) => {
           <Mytext text="SQLite Example" />
           <Mybutton
             title="Register"
-            customClick={() => navigation.navigate('Register')}
-          />
-          <Mybutton
-            title="Update"
-            customClick={() => navigation.navigate('Update')}
-          />
-          <Mybutton
-            title="View"
-            customClick={() => navigation.navigate('View')}
+            customClick={() => navigation.navigate('Register',{user_id:0})}
           />
           <Mybutton
             title="View All"
             customClick={() => navigation.navigate('ViewAll')}
           />
-          <Mybutton
-            title="Delete"
-            customClick={() => navigation.navigate('Delete')}
-          />
+          
         </View>
-        <Text
-          style={{
-            fontSize: 18,
-            textAlign: 'center',
-            color: 'grey'
-          }}>
-          Example of SQLite Database in React Native
-        </Text>
-        <Text
-          style={{
-            fontSize: 16,
-            textAlign: 'center',
-            color: 'grey'
-          }}>
-          www.aboutreact.com
-        </Text>
       </View>
     </SafeAreaView>
   );
