@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
-import Mybutton from './components/Mybutton';
-import Mytext from './components/Mytext';
+import NewButton from './components/newButton';
 import * as SQLite from 'expo-sqlite';
 const db = SQLite.openDatabase('mydb.db');
 
@@ -29,13 +28,17 @@ const HomeScreen = ({ navigation }) => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, backgroundColor: 'white' }}>
         <View style={{ flex: 1 }}>
-          <Mytext text="SQLite Example" />
-          <Mybutton
+          <Text className= "text-2xl p-2">SQLite Example</Text>
+          <NewButton
             title="Register"
+            bgStyle = "bg-green-600 my-1 rounded mx-20 p-3"
+            textStyle = "text-center text-xl text-white"
             customClick={() => navigation.navigate('Register',{user_id:0})}
           />
-          <Mybutton
+          <NewButton
             title="View All"
+            bgStyle = "bg-green-600 my-1 mx-20 rounded p-3"
+            textStyle = "text-center text-xl text-white"
             customClick={() => navigation.navigate('ViewAll')}
           />
           

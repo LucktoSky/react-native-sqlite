@@ -6,8 +6,8 @@ import {
   Alert,
   SafeAreaView,
 } from 'react-native';
-import Mytextinput from './components/Mytextinput';
-import Mybutton from './components/Mybutton';
+import NewTextinput from './components/newTextinput';
+import NewButton from './components/newButton';
 import * as SQLite from 'expo-sqlite';
 const db = SQLite.openDatabase('mydb.db');
 
@@ -111,7 +111,7 @@ const RegisterUser = ({ navigation, route }) => {
             <KeyboardAvoidingView
               behavior="padding"
               style={{ flex: 1, justifyContent: 'space-between' }}>
-              <Mytextinput
+              <NewTextinput
                 placeholder="Enter Name"
                 value={userName}
                 onChangeText={
@@ -119,7 +119,7 @@ const RegisterUser = ({ navigation, route }) => {
                 }
                 style={{ padding: 10 }}
               />
-              <Mytextinput
+              <NewTextinput
                 placeholder="Enter Contact No"
                 value={'' + userContact}
                 onChangeText={
@@ -129,7 +129,7 @@ const RegisterUser = ({ navigation, route }) => {
                 keyboardType="numeric"
                 style={{ padding: 10 }}
               />
-              <Mytextinput
+              <NewTextinput
                 placeholder="Enter Address"
                 value={userAddress}
                 onChangeText={
@@ -140,7 +140,11 @@ const RegisterUser = ({ navigation, route }) => {
                 multiline={true}
                 style={{ textAlignVertical: 'top', padding: 10 }}
               />
-              <Mybutton title="Submit" customClick={register_user} />
+              <NewButton 
+              bgStyle = "bg-green-600 my-1 mx-20 rounded p-3"
+              textStyle = "text-center text-xl text-white"
+              title="Submit" 
+              customClick={register_user} />
             </KeyboardAvoidingView>
           </ScrollView>
         </View>

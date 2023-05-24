@@ -1,16 +1,10 @@
 import React from 'react';
 import { View, TextInput } from 'react-native';
 
-const Mytextinput = (props) => {
+const NewTextinput = (props) => {
   return (
-    <View
-      style={{
-        marginLeft: 35,
-        marginRight: 35,
-        marginTop: 10,
-        borderColor: '#007FFF',
-        borderWidth: 1,
-      }}>
+    <View className= "mx-10 mt-5 border-2  border-green-600"
+     >
       <TextInput
         underlineColorAndroid="transparent"
         placeholder={props.placeholder}
@@ -29,4 +23,4 @@ const Mytextinput = (props) => {
   );
 };
 
-export default Mytextinput;
+export default NewTextinput;

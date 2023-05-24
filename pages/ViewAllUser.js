@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FlatList, Text, View, SafeAreaView, Pressable, Button, Alert } from 'react-native';
+import NewButton from './components/newButton';
+
 import * as SQLite from 'expo-sqlite';
 const db = SQLite.openDatabase('mydb.db');
 const ViewAllUser = ({navigation}) => {
@@ -68,7 +70,9 @@ const ViewAllUser = ({navigation}) => {
               />
             </View>
             <View>
-              <Button 
+              <NewButton
+              bgStyle = "bg-red-500 p-2 rounded"
+              textStyle = "text-white text-center" 
               onPress={()=>deleteUser(item.user_id)}
               title='Delete'
               /> 
@@ -80,8 +84,8 @@ const ViewAllUser = ({navigation}) => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, backgroundColor: 'white' }}>
-          <View className="flex flex-row justify-end gap-1 bg-slate-200 ">
+      <View className="flex">
+          <View className="flex flex-row justify-end gap-1  bg-slate-200  border-b-2 border-green-600 py-1">
             <View>
               <Button
               className={"bg-red-500"}
