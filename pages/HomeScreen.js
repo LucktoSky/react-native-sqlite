@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
-import NewButton from './components/newButton';
+import NewButton from './components/newButton'; // custom button
 import * as SQLite from 'expo-sqlite';
 const db = SQLite.openDatabase('mydb.db');
 
